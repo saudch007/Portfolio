@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import "../src/styles.css";
+import "/3D website/my-app/src/styles.css";
 
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import gsap from "gsap";
