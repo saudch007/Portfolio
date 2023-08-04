@@ -80,6 +80,15 @@ let mouseDown = false;
 let rgb = [];
 window.addEventListener("mousedown", () => (mouseDown = true));
 window.addEventListener("mouseup", () => (mouseDown = false));
+window.addEventListener("resize", () => {
+  sizes.width = window.innerWidth;
+  sizes.height = window.innerHeight;
+
+  // Update Camera
+  camera.updateProjectionMatrix();
+  camera.aspect = sizes.width / sizes.height;
+  renderer.setSize(sizes.width, sizes.height);
+});
 
 window.addEventListener("mousemove", (e) => {
   if (mouseDown) {
